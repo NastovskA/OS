@@ -1,0 +1,29 @@
+#!/usr/bin/python3       //izvrsuvanje na skripta
+import sys		//pristap do argumenti na programa
+
+def reverseWords(file_paths):  //funkcija koja kako argument prima lista od pateki do fajlovi
+
+    if len(file_paths) < 2:
+        print("Nedovolno argumenti!")
+        return   
+
+//so ovoj for se obrabotuva sekoj fajl posebno
+
+    for file_path in file_paths:
+        with open(file_path, 'r') as file: //so bukvata r = znaci read = citanje na fajlot 
+            lines = [line.strip().split() for line in file.readlines()]
+// strip() e funkcija za otstranuvanje prazni mesta
+// split() e funkcija koja deli zbor po zbor
+
+        modified_lines = [' '.join(reversed(words)) for words in lines]
+
+//sekoja lista od zborovi se zacuvuva vo lines
+// so reversed se prevrtuvaat zborovite vo redosled a join gi zadrzuva da se vo edna linija so prazno mesto
+
+        with open(file_path, 'w') as file:
+            file.write('\n'.join(modified_lines))
+
+//go otvara fajlot no so zapisuvanje poradi w, i go zapisuva fajlot so prevrten redosled
+
+if __name__ == "__main__":
+    reverseWords(sys.argv[1:])  //dali skriptata e izvrsena direkno ili e povikana od drug file, se isprakaan nazad vo reversedWords
