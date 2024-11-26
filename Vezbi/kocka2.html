@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Boxes</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0;
+            border-radius: 0; /* Заострени рабови */
+        }
+
+        .rounded {
+            border-radius: 30%; /* Заоблени рабови */
+        }
+
+        .hovered {
+            background-color: green; /* Зелена боја при hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="box-container"></div> <!-- Ова ќе биде празно -->
+    <button id="add-box">Add new box</button>
+
+    <script>
+        // Селектирање на контејнерот и копчето
+        const boxContainer = document.getElementById("box-container");
+        const addBoxButton = document.getElementById("add-box");
+
+        // Функција за додавање нова кутија
+        function addBox() {
+            const newBox = document.createElement("div"); // Создавање нов div
+            newBox.classList.add("box"); // Додавање на класа "box"
+
+            // Додавање на слушатели на новата кутија
+            newBox.addEventListener("click", function () {
+                newBox.classList.toggle("rounded"); // Промена на рабовите
+            });
+
+            newBox.addEventListener("mouseover", function () {
+                newBox.classList.add("hovered"); // Промена на бојата при hover
+            });
+
+            newBox.addEventListener("mouseout", function () {
+                newBox.classList.remove("hovered"); // Враќање на бела боја
+            });
+
+            boxContainer.appendChild(newBox); // Додавање на кутијата во контејнерот
+        }
+
+        // Додавање на првите кутији (по желба можеш да го отстраниш)
+        for (let i = 0; i < 3; i++) {
+            addBox();
+        }
+
+        // Слушател за копчето "Add new box"
+        addBoxButton.addEventListener("click", addBox);
+    </script>
+</body>
+</html>

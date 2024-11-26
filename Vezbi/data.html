@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Основи на WEB програмирање</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('clouds.jpg');
+            background-size: cover;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background-color: transparent;
+            padding: 10px;
+            border-bottom: 1px solid #0000CC;
+        }
+        
+        .title {
+            color: #0000CC;
+            font-size: 24px;
+            float: left;
+        }
+        
+        .navigation {
+            text-align: right;
+            padding: 5px;
+        }
+        
+        .navigation a {
+            color: #0000CC;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        .form-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+        }
+        
+        .section {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 5px;
+            color: #0000CC;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 200px;
+            padding: 5px;
+            margin: 3px 0;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+            background-color: #CCCCCC;
+            border: 1px solid #999;
+            padding: 5px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .footer {
+            background-color: transparent;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+            color: #0000CC;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Основи на WEB програмирање</div>
+        <div class="navigation">
+            <a href="index.html">ДОМА</a>
+            <a href="data.html">ВАШИ ПОДАТОЦИ</a>
+            <a href="shop.html">ПРОДАВНИЦА</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="section">
+            <div class="section-title">Пополнете ја следнава форма:</div>
+            
+            <div class="section">
+                <div class="section-title">Лични информации:</div>
+                <label>Име:</label>
+                <input type="text" id="name" placeholder="Име" required>
+                
+                <label>Презиме:</label>
+                <input type="text" id="surname" placeholder="Презиме" required>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Кориснички податоци:</div>
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="name@domain.com" required>
+                
+                <label>Password:</label>
+                <input type="password" id="password" placeholder="********" required>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Дополнителни за и следливи детали:</div>
+                <label>Адреса:</label>
+                <input type="text" id="address" placeholder="Улица и број" required>
+                
+                <label>Телефон:</label>
+                <input type="tel" id="phone" placeholder="000000-000" pattern="[0-9]{6}-[0-9]{3}" required>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+
+    <div class="footer">
+        OWEB, Copyright © 2024
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

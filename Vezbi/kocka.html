@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        .rounded {
+            border-radius: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box-container"></div>
+    <button id="add-box">Add new box</button>
+
+    <script>
+        // Контејнер за кутиите
+        const boxContainer = document.getElementById("box-container");
+
+        // Копче за додавање кутии
+        const addBoxButton = document.getElementById("add-box");
+
+        // Додавање кутија при клик
+        addBoxButton.onclick = function () {
+            const box = document.createElement("div"); // Создавање нова кутија
+            box.className = "box"; // Додавање класа
+
+            // Слушатели за кликови и hover
+            box.onclick = function () {
+                box.classList.toggle("rounded"); // Промена на рабовите
+            };
+            box.onmouseover = function () {
+                box.style.backgroundColor = "green"; // Промена на бојата
+            };
+            box.onmouseout = function () {
+              box.style.backgroundColor = "white"; // Враќање на бела боја
+            };
+
+            boxContainer.appendChild(box); // Додавање на кутијата во контејнерот
+
+        };
+    </script>
+</body>
+</html>

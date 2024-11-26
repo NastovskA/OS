@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="mk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Листа на задачи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .task-form {
+            margin-bottom: 20px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .task-form input,
+        .task-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+
+        .task-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .task-list .task {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-list button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ЛИСТА НА ЗАДАЧИ</h1>
+    <div class="task-form">
+
+        <label for="title">Наслов на задачата<span style="color: red;"> *</span>:</label>
+        <input type="text" id="title" placeholder="Внеси наслов" required  ><br>
+
+        <label for="content">Содржина (опционално):</label>
+        <textarea id="content" rows="3" placeholder="Внеси содржина (по желба)"></textarea>
+        <button id="add-task">ДОДАДИ ЗАДАЧА</button>
+
+    </div>
+
+    <div class="task-list"  id="task-list"> </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

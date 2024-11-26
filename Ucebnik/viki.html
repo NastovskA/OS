@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="viki.js"></script>
+    <link rel="stylesheet" href="viki.css">
+    <title>To-do Лист</title>
+</head>
+<body>
+    <h1>To-do Лист</h1>
+    
+    <form id="taskForm" onsubmit="addTask(event)"> 
+
+        <label for="title"><strong>Наслов на задачата:<strong></label>
+        <input type="text" id="title" required>
+        <br>
+        <label for="content"><strong>Содржина(опционалнo):</strong></label>
+        <input type="text" id="content">
+        <br>
+        <button type="submit">Додади задача</button>
+    </form>
+
+    <ul id="taskList"></ul> <!--kako sto se vmetnuvaat, taka se smestuvaat vo unordered lista -->
+</body>
+</html>

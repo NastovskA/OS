@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function start(){
+            var niza = [5, 9, 7, 1, 11, 25];
+            pecati("Nizata izgleda: ", niza, document.getElementById("orginalna"));
+            niza.sort(sporedba);
+            pecati("Novata niza izglea: ", niza, document.getElementById("sortirana"));
+
+        }
+
+        function pecati(heading, theArray, output){
+            output.innerHTML = heading + theArray.join(" ");
+        }
+
+        function sporedba(broj1, broj2){
+            return parseInt(broj1) - parseInt(broj2);
+        }
+        window.addEventListener("load", start, false);
+
+
+    </script>
+</head>
+<body>
+    <h1>Sorting an Array</h1>
+     <p id = "orginalna"></p>
+     <p id = "sortirana"></p>
+    
+</body>
+</html>
