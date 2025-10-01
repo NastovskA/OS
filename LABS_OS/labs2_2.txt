@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+import sys
+import os.path
+from collections import Counter
+
+# Проверка дали има доволно аргументи
+if len(sys.argv) != 3:#imeto na skriptata, file-ot i znasmenceto
+    print("Gresni argumenti")
+    sys.exit()
+
+file_name = sys.argv[1]#od nizata toa sto se naogja na prvata pozicija
+flag = sys.argv[2]#zosto flago-ot se naogja na vtorata pozicija
+
+# Читање на датотеката
+
+if (os.path.isfile(file_name)) : #funkcija sto vrakja boolean ako e file
+    with open(file_name, "r") as file:  # Open the file in read mode 
+        lines = file.readlines()  # Read the content
+        print(lines)
+        
+        
+# Извлекување на датумите од секој ред
+dates = []
+for line in lines:#gi zema line po linija on nizata lines
+    parts = line.split()#ja deli line spored prazno mesto
+    print(parts)
+    
+    if len(parts) < 6:  #go bara datumot po format
+        continue
+    
+    date = f"{parts[5]} {parts[6]}"  #kreira eden string sto se sostoid od 5 prazno mesto 6(mesecoot, denot), f -> znakce deka koristam del promenliva
+    dates.append(date)#se dodavaat samo tie sto imaat datumi, datoteka 2 e so ls -al na macos zatoa e vo razlichen format 
+
+if flag == '-d':
+    u_dates = set(dates)#set e bez duplikati, go sortira 
+    print("Datumi na promeni:")
+    
+    for date in u_dates:#gi zema edno po edno i gi pechati
+        print(date)
+
+elif flag == '-f':
+    date_count = Counter(dates)#gi broi datumite
+    print("Br datoteki po datum:")
+    print(date_count)
+    
+    for date, count in date_count.items():#zosto e collection(kako parovi da  vrakja) counter zatoa e iteam
+        print(f"{date}: {count}")
+
+else:
+    print("Nevazecko. Koristi -d ili -f kako znamence")
