@@ -1,0 +1,4 @@
+1 omlet dorucek 150
+7 poshirani dorucek 120
+20 mekici dorucek 70
+25 angliski dorucek 350

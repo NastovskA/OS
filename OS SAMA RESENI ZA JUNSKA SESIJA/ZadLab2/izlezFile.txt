@@ -1,0 +1,14 @@
+drwxr-xr-x  4 root  root   4096 2011-12-21 11:35 yarfs
+-rw-r--r--  1 goran goran   248 2012-12-03 16:38 zad_10.pl
+-rw-r--r--  1 goran goran   148 2012-12-03 16:38 zad_11.pl
+-rw-r--r--  1 goran goran   116 2012-12-03 16:38 zad_12.pl
+-rw-r--r--  1 goran goran    80 2012-11-25 19:24 zad 156
+-rw-r--r--  1 goran goran   143 2012-12-03 16:38 zad_156.pl
+-rw-r--r--  1 goran goran   232 2013-03-17 09:08 zad1.m
+-rw-r--r--  1 goran goran   159 2013-03-17 08:56 zad1.m~
+-rw-r--r--  1 goran goran    60 2012-12-03 16:38 zad_1.pl
+-rw-r--r--  1 goran goran   155 2012-12-03 16:38 zad_567.pl
+-rw-r--r--  1 goran goran    92 2012-12-03 16:38 zad 6.pl pl
+-rw-r--r--  1 goran goran   214 2012-12-03 16:38 zad_789.pl
+-rw-r--r--  1 goran goran   187 2013-03-05 13:11 zadaca.txt
+-rw-r--r--  1 goran goran  1343 2012-10-21 09:08 zad.lisp

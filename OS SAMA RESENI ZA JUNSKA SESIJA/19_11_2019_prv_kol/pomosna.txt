@@ -1,0 +1,6 @@
+kopiraj -a -r folder1
+izbrisi -force -temp
+kopiraj -x
+izbrisi -trash
+kopiraj nevaliden
+zemi -ime -id
